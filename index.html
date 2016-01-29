@@ -293,7 +293,7 @@
 
     function queueTweets(tweets){
       tweets.forEach(function(tweet){
-        if (!tweet.rt && !tweetQueue.some(function(item){ return item.tid == tweet.tid })){
+        if(!tweetQueue.some(function(item){ return item.tid == tweet.tid })){
           tweetQueue.push(tweet);
         }
       });
